@@ -1,0 +1,15 @@
+﻿@model string
+@{
+    ViewBag.Title = "PoundsToKilos";
+}
+
+<h2>UnitConversion</h2>
+<div>
+    <form action="~/First/ConvertPounds" method="post">
+        <input type="radio" name="weight" value="pounds" checked /> Pounds <br />
+        <input type="radio" name="weight" value="kilograms" /> Kilos <br />
+        <input type="number" name="number" step="any" />
+        <input type="submit" name="submit" />
+    </form>
+    <p>@Model</p>
+</div>

@@ -13,7 +13,14 @@ namespace DatabaseActivities.Controllers
         {
             return View();
         }
-
-
+        public ActionResult BaseConversion()
+        {
+            return View(viewName: "BaseConversion", model: " ");
+        }
+        [HttpPost]
+        public ActionResult BaseConversion(int startNumber)
+        {
+            return View("BaseConversion", model: "Your number will be: " + Convert.ToString(startNumber, 2));
+        }
     }
 }

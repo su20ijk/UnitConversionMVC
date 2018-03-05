@@ -14,20 +14,20 @@ namespace DatabaseActivities.Controllers
             return View();
         }
 
-        public ActionResult HorsesToBlocks()
+        public ActionResult HorseToBlocks()
         {
-            return View("HorsesToBlocks", model: "");
+            return View("HorseToBlocks", model: "");
         }
         [HttpPost]
         public ActionResult ConvertHorses(string type, double number)
         {
             if (type.Equals("horses") || type.Equals("Horses"))
             {
-                return View("HorsesToBlocks", model: "Horses = " + number * 33.3333333333);
+                return View("HorseToBlocks", model: "Blocks = " + number * 0.03);
             }
             else if (type.Equals("blocks") || type.Equals("Blocks"))
             {
-                return View("HorsesToBlocks", model: "Blocks = " + number * 0.03);
+                return View("HorseToBlocks", model: "Horses = " + number * 33.333333333333333333333333333333);
             }
             else
             {

@@ -1,12 +1,13 @@
 ﻿@model string
 @{
-    ViewBag.Title = "HorsesToBlocks";
+    ViewBag.Title = "HorseToBlocks";
 }
 <h2>UnitConversion</h2>
 <div>
     <form action="~/First/ConvertHorses" method="post">
-        <input type="radio" name="type" value="Horses" checked /> Pounds <br />
-        <input type="radio" name="type" value="Blocks" /> Kilos <br />
+        <p>What are you converting from?</p>
+        <input type="radio" name="type" value="Horses" checked /> Horses <br />
+        <input type="radio" name="type" value="Blocks" /> Blocks <br />
         <input type="number" name="number" step="any" />
         <input type="submit" name="submit" />
     </form>

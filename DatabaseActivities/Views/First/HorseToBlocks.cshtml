@@ -1,38 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace DatabaseActivities.Controllers
-{
-    public class FirstController : Controller
-    {
-        // GET: First
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult HorsesToBlocks()
-        {
-            return View("HorsesToBlocks", model: "");
-        }
-        [HttpPost]
-        public ActionResult ConvertPounds(string weight, double number)
-        {
-            if (weight.Equals("kilograms"))
-            {
-                return View("PoundsToKilos", model: "Pounds = " + number * 2.20462);
-            }
-            else if (weight.Equals("pounds"))
-            {
-                return View("PoundsToKilos", model: "Kilograms = " + number * 0.453592);
-            }
-            else
-            {
-                return View("UnitConverison", model: "ERROR");
-            }
-        }
-    }
+﻿@model string
+@{
+    ViewBag.Title = "HorsesToBlocks";
 }
+<h2>UnitConversion</h2>
+<div>
+    <form action="~/First/ConvertHorses" method="post">
+        <input type="radio" name="type" value="Horses" checked /> Pounds <br />
+        <input type="radio" name="type" value="Blocks" /> Kilos <br />
+        <input type="number" name="number" step="any" />
+        <input type="submit" name="submit" />
+    </form>
+    <p>@Model</p>
+</div>

@@ -197,6 +197,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\First\HorseToBlocks.cshtml" />
     <Content Include="Views\First\PoundsToKilos.cshtml" />
+    <Content Include="Views\First\BaseConversion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -67,5 +67,16 @@ namespace DatabaseActivities.Controllers
         {
             return View("BaseConversion", model: "Your number will be: " + Convert.ToString(startNumber, 2));
         }
+
+        public ActionResult MetersToFeet()
+         {
+        return View("MetersToFeet", model: "");
+         }
+
+    [HttpPost]
+    public ActionResult MetersToFeet(double inputNumber)
+    {
+        return View("MetersToFeet", model: "Feet: " + inputNumber * 3.21);
+    }
     }
 }

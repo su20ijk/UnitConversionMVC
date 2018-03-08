@@ -198,6 +198,7 @@
     <Content Include="Views\First\HorseToBlocks.cshtml" />
     <Content Include="Views\First\PoundsToKilos.cshtml" />
     <Content Include="Views\First\BaseConversion.cshtml" />
+    <Content Include="Views\First\MetersToFeet.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

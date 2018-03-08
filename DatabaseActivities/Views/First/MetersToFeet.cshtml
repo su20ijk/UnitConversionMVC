@@ -1,0 +1,19 @@
+﻿@model double
+@{
+    ViewBag.Title = "MetersToFeet";
+}
+
+<h2>MetersToFeet</h2>
+
+
+<div id="main">
+
+    <form step="any" action="~/First/ConvertNumber" method="post">
+
+        <input type="number" name="inputNumber" />
+        <input type="submit" name="submit" />
+        <p>@Model</p>
+    </form>
+
+
+</div>

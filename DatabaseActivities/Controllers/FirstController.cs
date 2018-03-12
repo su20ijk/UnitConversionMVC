@@ -63,6 +63,16 @@ namespace DatabaseActivities.Controllers
         {
             return View("BaseConversion", model: "Your number will be: " + Convert.ToString(startNumber, 2));
         }
+
+        public ActionResult GramToOunce()
+        {
+            return View("GramToOunce", "");
+        }
+
+        [HttpPost]
+        public ActionResult GramToOunce(double Grams)
+        {
+            return View(viewName: "GramToOunce", model: "Ounces: " + Grams * 0.035274);
+        }
     }
-}
 }

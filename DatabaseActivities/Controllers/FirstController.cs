@@ -34,10 +34,6 @@ namespace DatabaseActivities.Controllers
                 return View("UnitConversion", model: "ERROR");
             }
         }
-    }
-
-
-
         public ActionResult PoundsToKilos()
         {
             return View("PoundsToKilos", model: "");
@@ -68,4 +64,5 @@ namespace DatabaseActivities.Controllers
             return View("BaseConversion", model: "Your number will be: " + Convert.ToString(startNumber, 2));
         }
     }
+}
 }
